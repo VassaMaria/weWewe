@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM для интернет-магазина</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Мой интернет-магазин</h1>
+    <nav>
+      <button id="homeBtn">Главная</button>
+      <button id="analyticsBtn">Аналитика</button>
+      <button id="catalogBtn">Каталог</button>
+      <button id="profileBtn">Профиль</button>
+      <button id="registerBtn">Регистрация</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <h2>Рекомендуемые товары</h2>
+      <div class="product-list">
+        <div class="product">Товар 1</div>
+        <div class="product">Товар 2</div>
+        <div class="product">Товар 3</div>
+      </div>
+    </section>
+
+    <section id="analytics" class="page">
+      <h2>Аналитика продаж</h2>
+      <canvas id="salesChart" width="600" height="300"></canvas>
+    </section>
+
+    <section id="catalog" class="page">
+      <h2>Каталог товаров</h2>
+      <p>Каталог пока пуст.</p>
+    </section>
+
+    <section id="profile" class="page">
+      <h2>Профиль пользователя</h2>
+      <p>Добро пожаловать в ваш профиль!</p>
+    </section>
+
+    <section id="register" class="page">
+      <h2>Регистрация клиента</h2>
+      <form id="registerForm">
+        <label>Имя:
+          <input type="text" name="name" required />
+        </label><br /><br />
+        <label>Email:
+          <input type="email" name="email" required />
+        </label><br /><br />
+        <label>Пароль:
+          <input type="password" name="password" required />
+        </label><br /><br />
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+      <div id="clientsList"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/firebase@9.6.1/firebase-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/firebase@9.6.1/firebase-firestore.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
